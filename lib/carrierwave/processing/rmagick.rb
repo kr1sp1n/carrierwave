@@ -245,7 +245,11 @@ module CarrierWave
     #
     def manipulate!(options={})
       image = ::Magick::Image.read(current_path)
-
+      
+      puts
+      puts image.inspect
+      puts
+      
       frames = if image.size > 1
         list = ::Magick::ImageList.new
         image.each do |frame|
