@@ -247,7 +247,7 @@ module CarrierWave
       image = ::Magick::Image.read(current_path)
       
       puts
-      puts image.inspect
+      puts current_path
       puts
       
       frames = if image.size > 1
